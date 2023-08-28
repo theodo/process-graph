@@ -1,7 +1,7 @@
 import './App.css';
 import { useCallback, useState } from 'react';
 
-const INITIAL_VALUE = [{ text: "Document" }, { text: "some" }, { text: "colorfull", color: "coral" }, { text: "processes" }];
+const INITIAL_VALUE = [{ text: "Document" }, { text: "some" }, { text: "colorful", color: "coral" }, { text: "processes" }];
 const INITIAL_CONFIG = {
   "--step-color": "teal",
   "--background-color": "white",
