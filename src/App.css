@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+.process {
+  --arrow-size: calc(1/2 * var(--arrow-ratio) * var(--step-height));
+  min-height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.process--step {
+  background-color: var(--step-color);
+  height: var(--step-height);
+  margin: calc(1/2 * var(--step-line-spacing)) calc(1/2 * var(--step-spacing));
+  padding: var(--step-padding);
+  text-align: center;
+  vertical-align: middle;
+  color: var(--font-color);
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  position: relative;
+  display: flex;
+  font-size: var(--font-size);
+
+}
+
+.process--step::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-top: calc(1/2 * var(--step-height)) solid transparent;
+  border-bottom: calc(1/2 * var(--step-height)) solid transparent; 
+  border-left: var(--arrow-size) solid var(--step-color); 
+  right: calc(-1 * var(--arrow-size));
+  top: 0px;
+}
+
+.process--step:not(:first-child) {
+  padding-left: calc(var(--arrow-size) + var(--step-padding));
+}
+
+.process--step:not(:first-child)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-top: calc(1/2 * var(--step-height)) solid transparent;
+  border-bottom: calc(1/2 * var(--step-height)) solid transparent; 
+  border-left: var(--arrow-size) solid var(--background-color); 
+  left: 0px;
+  top: 0px;
+}
+
+.config {
+  display: flex;
+  direction: row;
+  padding: 40px;
+}
+
+.config--panel {
+  flex: 200px 1 0;
+  background-color: lightgrey;
+  margin: 20px;
+  padding: 10px;
+}
+
+.config--panel--control {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
