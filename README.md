@@ -3,8 +3,13 @@
 ## Roadmap and ideas
 
  - Drag n Drop to reorder steps.
- - Saving configuration/current process in localStorage or equivalent
- - Quick Reset
+ - Saving configuration/current process in localStorage or equivalent.
+ - Quick Reset.
+ - Button to quicly copy current graph to the clipboard.
+   - Note: as long as I find a way to do that without having to rewrite the renderer using canvas.
+ - MaxWidth setting to the steps.
+ - AutoSelect text color based on contrast of chosen color.
+ - Toggle to hide the configuration pannel as it might get kind of heavy.
 
 ## Available Scripts
 
