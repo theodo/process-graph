@@ -9,8 +9,8 @@ function Config({ config, setConfig }) {
   return (
     <>
         {Object.keys(config).map(key => (
-          <div >
-            <label key={key} className="config--panel--control">
+          <div key={key}>
+            <label className="config--panel--control">
               {key.substring(2)}
               <input value={config[key]} onChange={updateConfig} xconfigkey={key}></input>
             </label>

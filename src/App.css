@@ -80,3 +80,15 @@
   justify-content: space-between;
   margin: 5px;
 }
+
+.editor--steps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.editor--step {
+  padding: 1px 5px;
+  display: inline-flex;
+  cursor: grab;
+}
