@@ -34,8 +34,8 @@ function EditorField({step, setSteps, index, config}) {
 
   return (
     <DraggableListItem className="editor--step" id={step.id} index={index} type="editorStep" moveItem={moveStep}>
-      <input className="editor--step--field" type="text" value={step.text} onChange={setStepValue} />
-      <input className="editor--step--field" type="text" value={step.color} onChange={setStepColor} placeholder={config["--step-color"]} />
+      <input className="editor--step--field" type="text" value={step.text || ''} onChange={setStepValue} />
+      <input className="editor--step--field" type="text" value={step.color || ''} onChange={setStepColor} placeholder={config["--step-color"]} />
       <button onClick={removeStep} className="editor--step--remove">🗑</button>
     </DraggableListItem>
   );
